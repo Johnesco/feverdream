@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Fever Dream</title>
+<title>feverdream</title>
 <meta name="viewport" content="width=device-width, user-scalable=no">
 <link rel="stylesheet" href="lib/parchment/parchment.css">
 <link rel="stylesheet" href="lib/parchment/main.css">
@@ -67,8 +67,6 @@ div#gameport {
   caret-color: #e8d090;
 }
 
-.Style_user1 { display: none; }
-
 .Style_header {
   color: #e8d8b0;
 }
@@ -107,15 +105,18 @@ div#gameport {
 </style>
 
 <script src="lib/parchment/jquery.min.js"></script>
+<script src="lib/parchment/ie.js" nomodule></script>
 <script>
     parchment_options = {
-        default_story: ['lib/parchment/feverdream.ulx.js'],
+        default_story: ['lib/parchment/feverdream.gblorb.js'],
         lib_path: 'lib/parchment/',
+        story_name: 'feverdream.gblorb.js',
         use_proxy: 0,
         do_vm_autosave: 1,
     };
 </script>
 <script src="lib/parchment/main.js"></script>
+<script src="lib/parchment/resourcemap.js"></script>
 <script>
     window.addEventListener('pageshow', function(e) {
         if (e.persisted) { window.location.reload(); }
@@ -129,13 +130,14 @@ div#gameport {
   <div id="windowport">
     <noscript>
       <div style="text-align:center; padding:40px; color:#aa6644;">
-        <h2>Fever Dream</h2>
+        <h2>feverdream</h2>
         <p>JavaScript is required to play this game.</p>
       </div>
     </noscript>
   </div>
   <div id="loadingpane">
-    <div style="margin-bottom:20px; font-size:1.4em; color:#aa9966; letter-spacing:4px;">Fever Dream</div>
+    <div style="margin-bottom:20px; font-size:1.4em; color:#aa9966; letter-spacing:4px;">feverdream</div>
+    <img src="lib/parchment/waiting.gif" alt="Loading" style="opacity:0.5"><br>
     <em>Loading...</em>
   </div>
   <div id="errorpane" style="display:none;">
@@ -143,7 +145,5 @@ div#gameport {
   </div>
 </div>
 
-<script src="lib/sound-engine.js"></script>
-<script src="lib/sound-config.js"></script>
 </body>
 </html>
