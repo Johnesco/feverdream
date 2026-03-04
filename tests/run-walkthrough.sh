@@ -22,7 +22,7 @@ source "$SCRIPT_DIR/project.conf"
 # For scoreless games, override pass/fail with endgame detection
 if [[ "${SCORELESS_GAME:-false}" == "true" ]]; then
     OUTPUT_FILE="$PRIMARY_OUTPUT_FILE"
-    if [[ -f "$OUTPUT_FILE" ]] && grep -qiP "${WON_PATTERNS}" "$OUTPUT_FILE" 2>/dev/null; then
+    if [[ -f "$OUTPUT_FILE" ]] && grep -qiE "${WON_PATTERNS}" "$OUTPUT_FILE" 2>/dev/null; then
         echo ""
         echo "Override: PASS (scoreless game — endgame text detected)"
         exit 0
