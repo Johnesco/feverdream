@@ -4,7 +4,7 @@
 
 Fever Dream
 A Perceptual Horror by Anonymous
-Release 2 / Serial number 260304 / Inform 7 v10.1.2 / D
+Release 2 / Serial number 260310 / Inform 7 v10.1.2 / D
 
 
 You wake on a cold floor. Your head aches. You do not remember arriving.
@@ -69,6 +69,10 @@ The world has not changed. Your ability to see it has.
 
 >
 Laboratory
+A long room lined with workbenches and glass-fronted cabinets. Everything is labelled. Everything is in order. The labels are handwritten in the same careful script as the intake form upstairs. A passage leads north to the stairwell. East, a heavy door opens into cold storage.
+
+You see the shattered remains of the glass case.
+
 
 >Where the floor was solid before, a wound has opened -- a vertical shaft lined in something wet and muscular. You descend.
 
