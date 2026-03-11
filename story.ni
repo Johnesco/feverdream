@@ -15,7 +15,7 @@ The story headline is "A Perceptual Horror".
 The story genre is "Horror".
 The story description is "Three items alter your perception. The world stays the same. You do not."
 
-Use brief room descriptions.
+Use verbose room descriptions.
 
 Part 1 - Configuration and Global State
 
