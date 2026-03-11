@@ -1,74 +1,53 @@
-## Stage 1 — The Spectacles
+# Auto-generated walkthrough guide
 
-# You wake in the Receiving Room. Pick up the spectacles
-# and put them on — they reveal things invisible to the naked eye.
-
+# Pick up the spectacles
 > take spectacles
+# You put on the spectacles.
 > wear spectacles
 
-# Go east to the Corridor. With spectacles, you notice a
-# trapdoor outlined in the floor tiles.
+## Corridor
 
 > e
 
-# Descend through the trapdoor to the Stairwell.
-# (Impossible without spectacles — the floor looks solid.)
+## Stairwell
 
 > down
 
-# Pick up the pipe wrench from the bottom step.
-
+# Pick up the wrench
 > take wrench
 
-# Go south to the Laboratory. With spectacles, you spot
-# a glass case on the far wall containing a brass key.
+## Laboratory
 
 > s
 
-## Stage 2 — The Fungus
-
-# Smash the glass case with the wrench to get the brass key.
-
+# You swing the wrench. The glass shatters cleanly. The brass key drops into
+#   your hand.
 > break glass case
 
-# Go east to Cold Storage.
+## Cold Storage
 
 > e
 
-# Unlock the metal cabinet (stamped with a snowflake) using
-# the brass key. It swings open to reveal a grey fungus
-# labelled PERCEPTUAL AGENT — STAGE 2 THERAPY.
-
+# Unlock the cabinet
+# The key turns smoothly. The lock disengages with a click that echoes longer
+#   than it should.
 > unlock cabinet with key
-
-# Take the fungus and eat it. The world transforms — chairs
-# become crouching things, pipes become arteries. A passage
-# south from the Laboratory opens where solid floor used to be.
-
+# Pick up the fungus
 > take fungus
+# It tastes of nothing. Then of everything. The walls ripple once and settle
+#   into new shapes. You understand, now, that this is not distortion. This is
+#   clarity.
 > eat fungus
-
-# Return to the Laboratory.
-
+# Laboratory
 > w
-
-# Descend south into the Cistern. Chemical spray from cracked
-# pipes distorts your perception — text becomes corrupted.
-
+# Where the floor was solid before, a wound has opened -- a vertical shaft
+#   lined in something wet and muscular. You descend. Cistern The chamber is
+#   alive.
 > s
-
-## Stage 3 — The Source
-
-# The sign says LEFT drains, RIGHT floods. Turn the valve left
-# to drain the cistern and reveal the passage below.
-# (WARNING: turning right is instant death.)
-
+# You grip the handle and turn it left. Metal screams against metal. Below,
+#   the dark water begins to move -- circling, spiraling, draining.
 > turn valve left
-
-# Descend through the drainage grate to The Source.
-
+# You lower yourself through the grate. Source Y0u desc3nd thr0ugh th3 gr4te
+#   1nto a sp@ce th4t sh0uld n0t ex1st.
 > down
-
-# Touch the glowing stone basin to end the game.
-
 > touch basin

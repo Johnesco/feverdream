@@ -18,8 +18,6 @@ C:\code\ifhub\projects\feverdream\
 ├── Sounds/                ← Audio asset files (.ogg) for Blorb packaging
 └── tests/
     ├── project.conf       ← Project-specific test configuration
-    ├── run-walkthrough.sh ← Walkthrough runner (wrapper, with scoreless game override)
-    ├── find-seeds.sh      ← Seed discovery (wrapper)
     ├── seeds.conf         ← Golden seeds for deterministic testing
     └── inform7/
         ├── walkthrough.txt        ← Walkthrough commands
@@ -43,17 +41,17 @@ C:\code\ifhub\projects\feverdream\
 - **Native interpreters**: `C:\code\ifhub\tools\interpreters\` — `glulxe.exe`, `dfrotz.exe` (build with `build.sh` in MSYS2)
 - **RegTest runner**: `C:\code\ifhub\tools\regtest.py`
 - **Web player setup**: `C:\code\ifhub\tools\web\` — Parchment libraries, template, setup script
-- **Pipeline**: `C:\code\ifhub\tools\pipeline.sh` — compile → test → push orchestrator
+- **Pipeline**: `C:\code\ifhub\tools\pipeline.py` — compile → test → push orchestrator
 - **CSS overlay**: `C:\code\ifhub\reference\css-overlay.md` — play.html theming architecture
 
 ## Building
 
 ```bash
 # Compile with sound (recommended — embeds .ogg audio in .gblorb)
-bash /c/code/ifhub/tools/compile.sh feverdream --sound
+python /c/code/ifhub/tools/compile.py feverdream --sound
 
 # Or via pipeline (compile + test)
-bash /c/code/ifhub/tools/pipeline.sh feverdream compile test
+python /c/code/ifhub/tools/pipeline.py feverdream compile test
 ```
 
 ## Web Player
@@ -64,7 +62,7 @@ The player includes a **dynamic CSS mood system** — Houdini `@property` color 
 
 To serve locally (avoids file:// CORS issues):
 ```bash
-python /c/code/ifhub/tools/dev-server.py
+python /c/code/ifhub/tools/dev_server.py
 # Then open http://127.0.0.1:8000/feverdream/play.html
 ```
 
@@ -72,19 +70,19 @@ After recompiling, the compile script automatically updates the web binary.
 
 ## Testing
 
-Test scripts delegate to the shared framework at `C:\code\ifhub\tools\testing\`. Platform detection in `project.conf` auto-selects native `glulxe.exe` (Git Bash) or WSL `glulxe` (Linux).
+Tests use the shared framework at `C:\code\ifhub\tools\testing\`. Platform detection in `project.conf` auto-selects native `glulxe.exe` (Git Bash) or WSL `glulxe` (Linux).
 
-Fever Dream is a **scoreless game** — the walkthrough wrapper overrides the framework's score-based pass/fail with endgame text detection (`WON_PATTERNS` in `project.conf`).
+Fever Dream is a **scoreless game** — the walkthrough runner uses endgame text detection (`WON_PATTERNS` in `project.conf`) instead of score-based pass/fail.
 
 ```bash
 # Run walkthrough (native — no WSL needed if interpreters are built)
-bash tests/run-walkthrough.sh
+python /c/code/ifhub/tools/testing/run_walkthrough.py --config tests/project.conf
 
 # Find golden seeds
-bash tests/find-seeds.sh
+python /c/code/ifhub/tools/testing/find_seeds.py --config tests/project.conf
 
 # Or via pipeline
-bash /c/code/ifhub/tools/pipeline.sh feverdream compile test
+python /c/code/ifhub/tools/pipeline.py feverdream compile test
 ```
 
 ## Game Overview
