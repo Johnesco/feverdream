@@ -176,7 +176,9 @@ The lab plaque is scenery in the Laboratory.
 The glass case is scenery in the Laboratory. The glass case is perception-hidden. The glass case can be intact or shattered. The glass case is intact.
 
 Instead of attacking the glass case:
-	if the player carries the pipe wrench:
+	if the glass case is shattered:
+		say "The case is already broken. Nothing but glass fragments remain.";
+	otherwise if the player carries the pipe wrench:
 		play the sound of glass-sfx;
 		say "You swing the wrench. The glass shatters cleanly. The brass key drops into your hand.";
 		now the brass key is carried by the player;
