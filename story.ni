@@ -17,6 +17,8 @@ The story description is "Three items alter your perception. The world stays the
 
 Use verbose room descriptions.
 
+Test me with "take spectacles / wear spectacles / e / down / take wrench / s / break glass case / e / unlock cabinet with key / take fungus / eat fungus / w / s / turn valve left / down / touch basin".
+
 Part 1 - Configuration and Global State
 
 Chapter 1 - Perceptual States
@@ -160,7 +162,7 @@ Understand "wrench" and "tool" as the pipe wrench.
 
 Chapter 2 - The Laboratory
 
-The Laboratory is a room. The Laboratory is in the Basement. It is south of the Stairwell. "A long room lined with workbenches and glass-fronted cabinets. Everything is labelled. Everything is in order. The labels are handwritten in the same careful script as the intake form upstairs. A passage leads north to the stairwell. East, a heavy door opens into cold storage.[glass-case-status]"
+The Laboratory is a room. The Laboratory is in the Basement. It is south of the Stairwell. "A long room lined with workbenches and glass-fronted cabinets. Everything is labelled. Everything is in order. The labels are handwritten in the same careful script as the intake form upstairs. A passage leads north to the stairwell. East, a heavy door opens into cold storage.[glass-case-status][lab-floor-status]"
 
 To say glass-case-status:
 	if the player is wearing the spectacles:
@@ -168,6 +170,10 @@ To say glass-case-status:
 			say "[paragraph break]One of the glass cases, mounted on the far wall, holds something you missed before: a brass key, suspended on a wire inside the glass.";
 		otherwise:
 			say "[paragraph break]You see the shattered remains of the glass case."
+
+To say lab-floor-status:
+	if the fungus-consumed is true:
+		say "[paragraph break]The floor at the south end of the room has split open. A dark shaft descends, lined with something that glistens and contracts like a throat."
 
 The workbenches are scenery in the Laboratory.
 

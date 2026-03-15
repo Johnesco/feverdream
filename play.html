@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <title>Fever Dream</title>
 <meta name="viewport" content="width=device-width, user-scalable=no">
-<link rel="stylesheet" href="lib/parchment/parchment.css?v=1773194277">
-<link rel="stylesheet" href="lib/parchment/main.css?v=1773194277">
+<link rel="stylesheet" href="lib/parchment/parchment.css?v=1773570120">
+<link rel="stylesheet" href="lib/parchment/main.css?v=1773570120">
 
 <style>
 /* ── Houdini @property — register as <color> for smooth transitions ── */
@@ -499,25 +499,82 @@ body.drain-shake #gameport {
 }
 
 /* ══════════════════════════════════════════════════════════════
-   PERSISTENT: Post-fungus — breathing vignette, slower fade-in
+   PERSISTENT: Post-fungus — shock, peak, recovery
+   Ramps up over ~10s, peaks at ~15s, fades out by ~40s.
+   Settles to a mild permanent altered state.
    ══════════════════════════════════════════════════════════════ */
 
-@keyframes breathingVignette {
-  0%, 100% {
+/* Combined distortion + sway (40s one-shot) */
+@keyframes fungusDecay {
+  0% {
+    filter: blur(0.5px) hue-rotate(5deg) saturate(1.1);
+    letter-spacing: 0.5px;
+    word-spacing: 1px;
+    text-shadow: -0.5px 0 rgba(200,140,40,0.1), 0.5px 0 rgba(80,160,60,0.08);
+    transform: skewX(0deg) translateX(0) rotate(0deg);
+  }
+  /* Ramp up */
+  25% {
+    filter: blur(2px) hue-rotate(40deg) saturate(1.6);
+    letter-spacing: 3px;
+    word-spacing: 5px;
+    text-shadow: -1.5px 0 rgba(200,140,40,0.35), 1.5px 0 rgba(80,160,60,0.25), 0 1px rgba(160,100,180,0.2);
+    transform: skewX(0.4deg) translateX(3px) rotate(-0.3deg);
+  }
+  /* Peak */
+  40% {
+    filter: blur(3px) hue-rotate(65deg) saturate(2);
+    letter-spacing: 6px;
+    word-spacing: 10px;
+    text-shadow: -2.5px 0 rgba(200,140,40,0.5), 2.5px 0 rgba(80,160,60,0.4), 0 1.5px rgba(160,100,180,0.3);
+    transform: skewX(-0.5deg) translateX(-4px) rotate(0.4deg);
+  }
+  /* Fade out */
+  70% {
+    filter: blur(1px) hue-rotate(18deg) saturate(1.2);
+    letter-spacing: 1px;
+    word-spacing: 1.5px;
+    text-shadow: -0.6px 0 rgba(200,140,40,0.12), 0.6px 0 rgba(80,160,60,0.08);
+    transform: skewX(0.1deg) translateX(0.5px) rotate(-0.05deg);
+  }
+  /* Settled */
+  100% {
+    filter: blur(0.3px) hue-rotate(8deg) saturate(1.1);
+    letter-spacing: 0.3px;
+    word-spacing: 0.5px;
+    text-shadow: -0.4px 0 rgba(180,120,40,0.08), 0.4px 0 rgba(80,140,60,0.05);
+    transform: skewX(0deg) translateX(0) rotate(0deg);
+  }
+}
+
+/* Vignette — ramp, peak, settle (40s one-shot) */
+@keyframes fungusVignette {
+  0% {
     box-shadow:
       inset 0 0 60px 15px rgba(160,120,40,0.06),
       inset 0 0 120px 30px rgba(140,100,30,0.03);
   }
-  50% {
+  40% {
     box-shadow:
-      inset 0 0 80px 25px rgba(180,140,50,0.12),
-      inset 0 0 150px 40px rgba(160,120,40,0.06);
+      inset 0 0 100px 35px rgba(160,120,40,0.35),
+      inset 0 0 200px 60px rgba(140,100,30,0.2),
+      inset 0 0 300px 80px rgba(120,80,20,0.1);
   }
+  100% {
+    box-shadow:
+      inset 0 0 60px 15px rgba(160,120,40,0.08),
+      inset 0 0 120px 30px rgba(140,100,30,0.04);
+  }
+}
+
+body.state-fungus .BufferWindowInner {
+  animation: fungusDecay 40s ease-in-out forwards;
+  transform-origin: top center;
 }
 
 body.state-fungus #gameport::after {
   opacity: 1;
-  animation: breathingVignette 4s ease-in-out infinite;
+  animation: fungusVignette 40s ease-in-out forwards;
 }
 
 body.state-fungus .BufferLine {
@@ -560,8 +617,8 @@ body.state-spray #gameport::before {
 }
 </style>
 
-<script src="lib/parchment/jquery.min.js?v=1773194277"></script>
-<script src="lib/parchment/ie.js?v=1773194277" nomodule></script>
+<script src="lib/parchment/jquery.min.js?v=1773570120"></script>
+<script src="lib/parchment/ie.js?v=1773570120" nomodule></script>
 <script>
     parchment_options = {
         default_story: ['lib/parchment/feverdream.gblorb.js'],
@@ -571,8 +628,8 @@ body.state-spray #gameport::before {
         do_vm_autosave: 1,
     };
 </script>
-<script src="lib/parchment/parchment.js?v=1773194277"></script>
-<script src="lib/parchment/resourcemap.js?v=1773194277"></script>
+<script src="lib/parchment/parchment.js?v=1773570120"></script>
+<script src="lib/parchment/resourcemap.js?v=1773570120"></script>
 <script>
     window.addEventListener('pageshow', function(e) {
         if (e.persisted) { window.location.reload(); }
