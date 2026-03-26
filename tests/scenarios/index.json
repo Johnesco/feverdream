@@ -1,0 +1,6 @@
+{
+  "scenarios": [
+    { "name": "startup", "title": "Starting Room", "category": "Smoke Tests" },
+    { "name": "full-run", "title": "Complete Walkthrough", "category": "Win Paths", "primary": true }
+  ]
+}

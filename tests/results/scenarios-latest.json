@@ -1,0 +1,63 @@
+{
+  "game": "Fever Dream",
+  "regtest_file": "feverdream\\tests\\feverdream.regtest",
+  "seed": "1",
+  "duration_seconds": 0.1,
+  "total": 2,
+  "passed": 2,
+  "failed": 0,
+  "skipped": 0,
+  "wins": 1,
+  "win_scenarios": [
+    "full-run"
+  ],
+  "primary": "full-run",
+  "scenarios": [
+    {
+      "name": "startup",
+      "commands": 1,
+      "transcript_lines": 36,
+      "exit_code": 0,
+      "output_file": "feverdream\\tests\\scenarios\\startup.transcript.txt",
+      "commands_file": "feverdream\\tests\\scenarios\\startup.commands.txt",
+      "seed": "1",
+      "status": "pass",
+      "score": "",
+      "win": false,
+      "won_text": false,
+      "deaths": 0,
+      "errors": 0,
+      "cant_see": 0,
+      "cant_go": 0,
+      "parse_errors": 0,
+      "score_ups": 0,
+      "score_downs": 0,
+      "category": "Smoke Tests",
+      "title": "Starting Room",
+      "primary": false
+    },
+    {
+      "name": "full-run",
+      "commands": 16,
+      "transcript_lines": 156,
+      "exit_code": 0,
+      "output_file": "feverdream\\tests\\scenarios\\full-run.transcript.txt",
+      "commands_file": "feverdream\\tests\\scenarios\\full-run.commands.txt",
+      "seed": "1",
+      "status": "pass",
+      "score": "",
+      "win": true,
+      "won_text": true,
+      "deaths": 0,
+      "errors": 0,
+      "cant_see": 0,
+      "cant_go": 0,
+      "parse_errors": 0,
+      "score_ups": 0,
+      "score_downs": 0,
+      "category": "Win Paths",
+      "title": "Complete Walkthrough",
+      "primary": true
+    }
+  ]
+}

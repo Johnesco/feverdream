@@ -1,0 +1,26 @@
+# Fever Dream — RegTest scenarios
+# Perceptual horror puzzle chain
+
+** game: ../feverdream.ulx
+
+* startup
+> look
+{vital}
+
+* full-run
+> take spectacles
+> wear spectacles
+> e
+> down
+> take wrench
+> s
+> break glass case
+> e
+> unlock cabinet with key
+> take fungus
+> eat fungus
+> w
+> s
+> turn valve left
+> down
+> touch basin

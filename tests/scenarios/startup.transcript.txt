@@ -1,0 +1,36 @@
+
+
+
+
+Fever Dream
+A Perceptual Horror by Anonymous
+Release 2 / Serial number 260322 / Inform 7 v10.1.2 / D
+
+
+You wake on a cold floor. Your head aches. You do not remember arriving.
+
+The air smells of iodine and old paper.
+
+Receiving Room
+Fluorescent tubes buzz overhead, one of them flickering at the edge of failure. A long counter divides the room -- scuffed linoleum on your side, dark wood on the other. The only door leads east, into a corridor.
+
+A yellowed form lies on the counter.
+
+A pair of wire-rimmed spectacles sits beside the form.
+
+
+> look
+Receiving Room
+Fluorescent tubes buzz overhead, one of them flickering at the edge of failure. A long counter divides the room -- scuffed linoleum on your side, dark wood on the other. The only door leads east, into a corridor.
+
+A yellowed form lies on the counter.
+
+A pair of wire-rimmed spectacles sits beside the form.
+
+
+> score
+There is no score in this story.
+
+
+> quit
+Are you sure you want to quit? 

@@ -1,0 +1,31 @@
+{
+  "game": "Fever Dream",
+  "timestamp": "2026-03-26T03:13:08+00:00",
+  "binary_hash": "49d3d726",
+  "duration_seconds": 0.4,
+  "layers": {
+    "plotex": {
+      "status": "skip",
+      "detail": "not configured"
+    },
+    "regtest": {
+      "status": "pass",
+      "detail": "all assertions passed",
+      "failures": []
+    },
+    "scenarios": {
+      "status": "pass",
+      "total": 2,
+      "passed": 2,
+      "failed": 0,
+      "skipped": 0,
+      "wins": 1,
+      "win_scenarios": [
+        "full-run"
+      ],
+      "duration": 0.1,
+      "primary_walkthrough": "full-run"
+    }
+  },
+  "overall": "pass"
+}
