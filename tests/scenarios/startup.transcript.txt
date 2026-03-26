@@ -30,7 +30,3 @@ A pair of wire-rimmed spectacles sits beside the form.
 
 > score
 There is no score in this story.
-
-
-> quit
-Are you sure you want to quit? 
