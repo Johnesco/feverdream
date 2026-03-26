@@ -4,7 +4,7 @@
 
 Fever Dream
 A Perceptual Horror by Anonymous
-Release 2 / Serial number 260315 / Inform 7 v10.1.2 / D
+Release 2 / Serial number 260322 / Inform 7 v10.1.2 / D
 
 
 You wake on a cold floor. Your head aches. You do not remember arriving.
@@ -112,9 +112,6 @@ In th3 c3nter, a l0w st0ne b@sin h0lds s0meth1ng lum1nous. 1t 1s w@rm.
     *** You reach in. It reaches back. ***
 
 
-
-Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?
-> Please give one of the answers above.
 
 Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?
 > 

@@ -1,0 +1,99 @@
+{
+  "title": "Fever Dream",
+  "startRoom": "receiving-room",
+  "rooms": [
+    {
+      "id": "receiving-room",
+      "name": "Receiving Room",
+      "description": "Fluorescent tubes buzz overhead, one of them flickering at the edge of failure. A long counter divides the room -- scuffed linoleum on your side, dark wood on the other. The only door leads east, into a corridor.",
+      "visits": 1,
+      "x": 0,
+      "y": 0,
+      "cx": 80,
+      "cy": 60
+    },
+    {
+      "id": "corridor",
+      "name": "Corridor",
+      "description": "A long hallway tiled in white, though several tiles have cracked and not been replaced. The gaps show raw concrete beneath. The Receiving Room lies west. East, a treatment room door stands ajar.",
+      "visits": 1,
+      "x": 1,
+      "y": 0,
+      "cx": 240,
+      "cy": 60
+    },
+    {
+      "id": "stairwell",
+      "name": "Stairwell",
+      "description": "Concrete steps descend to a landing where the air turns cold and damp. Pipes run along the ceiling, sweating condensation. The trapdoor above opens back to the corridor. A passage continues south into a laboratory.",
+      "visits": 1,
+      "x": 1,
+      "y": 1,
+      "cx": 240,
+      "cy": 180
+    },
+    {
+      "id": "laboratory",
+      "name": "Laboratory",
+      "description": "A long room lined with workbenches and glass-fronted cabinets. Everything is labelled. Everything is in order. The labels are handwritten in the same careful script as the intake form upstairs. A passage leads north to the stairwell. East, a heavy door opens into cold storage.",
+      "visits": 2,
+      "x": 1,
+      "y": 2,
+      "cx": 240,
+      "cy": 300
+    },
+    {
+      "id": "cold-storage",
+      "name": "Cold Storage",
+      "description": "The temperature drops the moment you cross the threshold. Your breath fogs. Racks of specimen jars line the walls, their contents suspended in amber fluid. A heavy metal cabinet stands against the far wall, marked with a snowflake symbol.",
+      "visits": 1,
+      "x": 2,
+      "y": 2,
+      "cx": 400,
+      "cy": 300
+    }
+  ],
+  "edges": [
+    {
+      "from": "receiving-room",
+      "to": "corridor",
+      "direction": "e",
+      "isStandard": true,
+      "bidirectional": false
+    },
+    {
+      "from": "corridor",
+      "to": "stairwell",
+      "direction": "d",
+      "isStandard": true,
+      "bidirectional": false
+    },
+    {
+      "from": "stairwell",
+      "to": "laboratory",
+      "direction": "s",
+      "isStandard": true,
+      "bidirectional": false
+    },
+    {
+      "from": "laboratory",
+      "to": "cold-storage",
+      "direction": "e",
+      "isStandard": true,
+      "bidirectional": true
+    },
+    {
+      "from": "cold-storage",
+      "to": "laboratory",
+      "direction": "w",
+      "isStandard": true,
+      "bidirectional": true
+    }
+  ],
+  "viewBox": [
+    -45,
+    -22,
+    570,
+    404
+  ]
+}
